@@ -5,12 +5,12 @@ require 'bundler/capistrano' # adds bundle:install step to deploy pipeline
 default_run_options[:env] = {'PATH' => '/usr/local/bin:$PATH'}
 
 set :application, "Kochiku Worker"
-set :repository,  "https://github.com/square/kochiku-worker.git"
+set :repository,  "https://github.com/anhqpham/kochiku-worker.git"
 set :branch, "master"
 set :scm, :git
 
 set :user, "kochiku"
-set :deploy_to, "~/kochiku-worker"
+set :deploy_to, "/home/#{user}/kochiku-worker"
 set :deploy_via, :remote_cache
 set :keep_releases, 5
 set :use_sudo, false
