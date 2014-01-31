@@ -11,7 +11,7 @@ set :scm, :git
 
 set :user, "kochiku"
 set :deploy_to, "/home/#{user}/kochiku-worker"
-set :deploy_via, :remote_cache
+set :deploy_via, :copy
 set :keep_releases, 5
 set :use_sudo, false
 
